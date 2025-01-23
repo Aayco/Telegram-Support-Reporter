@@ -1,4 +1,4 @@
-#People Say You Can't Make A Telegram Reporter With Only Requests So I Will Show Them How
+ple Say You Can't Make A Telegram Reporter With Only Requests So I Will Show Them How
 #Check If Requests Module Installed
 try:
     from requests import post as p
@@ -32,6 +32,8 @@ headers = {
 phone_number = input('Enter Your Phone Number: ')
 #Input Issue Message
 issue_message = input('Enter Your Issue: ')
+#Input Your Full Legal Name
+full_name = input('Enter Your Full Legal Name: ')
 #Input Email For Contact
 email = input('Enter Your Email: ')
 #Input The Page Language
@@ -41,6 +43,8 @@ language = input('Enter The Page Language (ex: en for engilsh or ar for arabic):
 data = {
     #Your Issue Message
     "message": issue_message,
+    #Your Full Legal Name
+    "legal_name": full_name,
     #Your Email For Contact
     "email": email,
     #Your Account Number
@@ -56,7 +60,7 @@ try:
     #Check If Issue Sent To Telegram Successfully
     if response.status_code == 200 and '<div class="alert alert-success">' in (response.text):
         #Print Success Message
-        print(f'Issue Message: {issue_message}\nFor Number: {phone_number}\nHas Been Succesfully Sent To {url}\nCheck Your Email {email} For Any Reply From Telegram Support')
+        print(f'Issue Message: {issue_message}\nFull Legal Name {full_name}\nFor Number: {phone_number}\nHas Been Succesfully Sent To {url}\nCheck Your Email {email} For Any Reply From Telegram Support')
     else:
         #Prrint Failure Message
         print('There Is Something Wrong Happend')
