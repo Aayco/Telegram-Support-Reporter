@@ -1,4 +1,4 @@
-ple Say You Can't Make A Telegram Reporter With Only Requests So I Will Show Them How
+#People Say You Can't Make A Telegram Reporter With Only Requests So I Will Show Them How
 #Check If Requests Module Installed
 try:
     from requests import post as p
